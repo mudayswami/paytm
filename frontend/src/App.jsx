@@ -1,10 +1,22 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Signup } from "./pages/Signup"
+import { Signin } from "./pages/Signin";
+import { Home } from "./pages/Home";
+import {SendMoney} from "./pages/SendMoney";
+import './App.css';
 function App() {
 
   return (
-    <div>
-        Hello world
-    </div>
+    <>
+      <BrowserRouter >
+        <Routes>
+          <Route path="/signup" element={<Signup/>}></Route>
+          <Route path="/signin" element={<Signin/>}></Route>
+          <Route path="/dashboard" element={<Home/>}></Route>
+          <Route path="/send" element={<SendMoney/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
